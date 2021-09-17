@@ -4,10 +4,12 @@ import (
 	"fmt"
 )
 
-func test() {
-	fmt.Println("Test in arithmics called.")
+func arithmicsInit() {
+	var parsedContent string = arithmicsParse("beep")
+	fmt.Println(parsedContent)
 }
 
-func arithmicsParse() {
-	fmt.Println("beep")
+func arithmicsParse(value string) string {
+	fmt.Println("haha beep boop")
+	return value
 }
