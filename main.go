@@ -30,7 +30,7 @@ func main() {
 			var chosenMode int8
 			var _, err = fmt.Scan(&chosenMode)
 			if err != nil {
-				fmt.Println("Invalid input.")
+				fmt.Println("Invalid input type.")
 				return nil
 			}
 			switch chosenMode {
@@ -39,10 +39,15 @@ func main() {
 				arithmicsInit()
 			case 2:
 				fmt.Println("Comparisons mode selected.")
+				comparisonsInit()
 			case 3:
 				fmt.Println("Fractions, decimals & percentages mode selected.")
+				fdpInit()
 			case 4:
 				fmt.Println("Trigonometry mode selected.")
+				trigonometryInit()
+			default:
+				fmt.Println("That's not a mode that currently exists.")
 			}
 			return nil
 		},
