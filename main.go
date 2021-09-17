@@ -1,6 +1,7 @@
 package main
 
 // this comment is for a test commit
+// another test
 
 import (
 	"fmt"
