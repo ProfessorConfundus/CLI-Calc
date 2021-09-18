@@ -1,7 +1,8 @@
 package main
 
-// this comment is for a test commit
-// another test
+/*
+This is a calculator based entirely in the Command Line Interface. Made by ProfessorConfundus @ https://github.com/ProfessorConfundus/
+*/
 
 import (
 	"fmt"
@@ -36,7 +37,7 @@ func main() {
 			switch chosenMode {
 			case 1:
 				fmt.Println("Basic arithmics mode selected.")
-				arithmicsInit()
+				arithmicsInit(c.Args())
 			case 2:
 				fmt.Println("Comparisons mode selected.")
 				comparisonsInit()
@@ -50,6 +51,21 @@ func main() {
 				fmt.Println("That's not a mode that currently exists.")
 			}
 			return nil
+		},
+		Commands: []*cli.Command{
+			{
+				Name:    "arithmics",
+				Aliases: []string{"a", "1"},
+				Usage:   "Quickly compute arithmic problems without using the interactive mode.",
+				Action: func(c *cli.Context) error {
+					arithmicsInit(c.Args())
+					return nil
+				},
+			},
+			{
+				Name:    "comparisons",
+				Aliases: []string{"c", "2"},
+			},
 		},
 	}
 	var err = app.Run(os.Args)
