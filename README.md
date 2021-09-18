@@ -1,7 +1,7 @@
 PC's Command Line Calculator
 ============================
 
-This is a calculator based entirely in the Command Line Interface. It is supposed to be a sort of test project for myself to help me learn Go.
+This is a calculator based entirely in the Command Line Interface. It is supposed to be a sort of test project for myself to help me learn Go. It is currently *severly* incomplete, and does not serve any useful functionality yet.
 
 ## Documentation
 
