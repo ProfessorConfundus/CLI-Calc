@@ -1,7 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
 
-func fdpInit() {
+	"github.com/urfave/cli/v2"
+)
+
+func fdpInit(cli.Args) {
 	fmt.Println("is it working")
 }

@@ -40,13 +40,13 @@ func main() {
 				arithmicsInit(c.Args())
 			case 2:
 				fmt.Println("Comparisons mode selected.")
-				comparisonsInit()
+				comparisonsInit(c.Args())
 			case 3:
 				fmt.Println("Fractions, decimals & percentages mode selected.")
-				fdpInit()
+				fdpInit(c.Args())
 			case 4:
 				fmt.Println("Trigonometry mode selected.")
-				trigonometryInit()
+				trigonometryInit(c.Args())
 			default:
 				fmt.Println("That's not a mode that currently exists.")
 			}
@@ -65,6 +65,29 @@ func main() {
 			{
 				Name:    "comparisons",
 				Aliases: []string{"c", "2"},
+				Usage:   "Quickly compare values without using the interactive mode.",
+				Action: func(c *cli.Context) error {
+					comparisonsInit(c.Args())
+					return nil
+				},
+			},
+			{
+				Name:    "fdp",
+				Aliases: []string{"2"},
+				Usage:   "Quickly compute fractions, decimals or percentages without using the interactive mode.",
+				Action: func(c *cli.Context) error {
+					fdpInit(c.Args())
+					return nil
+				},
+			},
+			{
+				Name:    "trigonometry",
+				Aliases: []string{"t", "4"},
+				Usage:   "Quickly compute trigonometry-related problems without using the interactive mode.",
+				Action: func(c *cli.Context) error {
+					trigonometryInit(c.Args())
+					return nil
+				},
 			},
 		},
 	}

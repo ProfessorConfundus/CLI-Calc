@@ -1,7 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
 
-func trigonometryInit() {
+	"github.com/urfave/cli/v2"
+)
+
+func trigonometryInit(cli.Args) {
 	fmt.Println("haha triangles go brrr")
 }
